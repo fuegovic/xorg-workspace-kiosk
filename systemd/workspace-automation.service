@@ -1,0 +1,21 @@
+[Unit]
+Description=Ubuntu Workspace Automation Kiosk
+After=graphical.target
+Wants=graphical.target
+
+[Service]
+Type=simple
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=%h/.Xauthority
+ExecStart=%h/bin/workspace-launcher.sh
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+# Restart limits to prevent rapid restart loops
+StartLimitIntervalSec=300
+StartLimitBurst=5
+
+[Install]
+WantedBy=default.target
