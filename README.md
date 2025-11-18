@@ -172,21 +172,6 @@ These commands are applied automatically via `~/.xinitrc` during installation.
 3. Select "Ubuntu on Xorg" (or similar)
 4. Log back in
 
-### Windows Opening as Tabs
-
-Make sure you're **not** using Snap Chromium:
-
-```bash
-# Check if Snap version is installed
-snap list | grep chromium
-
-# Remove Snap version
-sudo snap remove chromium
-
-# Install apt version
-sudo apt install chromium-browser
-```
-
 ### Windows Not Appearing
 
 ```bash
@@ -328,3 +313,4 @@ Built with:
 ---
 
 **Made for Ubuntu/Linux kiosk deployments** 🐧
+
