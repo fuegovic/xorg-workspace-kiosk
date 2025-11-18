@@ -41,7 +41,7 @@ chmod +x install.sh
 
 The installer will:
 1. Guide you through workspace configuration
-2. Install dependencies (`wmctrl`, `xdotool`, `chromium-browser`)
+2. Install dependencies (`wmctrl`, `xdotool`, `chromium` via snap)
 3. Set up systemd service for auto-start
 4. Configure health monitoring
 
@@ -313,4 +313,3 @@ Built with:
 ---
 
 **Made for Ubuntu/Linux kiosk deployments** 🐧
-
