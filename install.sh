@@ -168,9 +168,16 @@ sudo apt-get update
 sudo apt-get install -y \
     wmctrl \
     xdotool \
-    chromium-browser \
     x11-xserver-utils \
     cron
+
+# Install Chromium via snap (more reliable on modern Ubuntu)
+if ! snap list chromium &>/dev/null; then
+    echo "Installing Chromium via snap..."
+    sudo snap install chromium
+else
+    echo "Chromium snap already installed"
+fi
 
 echo "[3/8] Creating directory structure..."
 mkdir -p "$HOME/.config/systemd/user"
