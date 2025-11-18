@@ -1,0 +1,46 @@
+# Workspace Configuration File
+# Define what application/webpage to launch on each workspace
+
+# Format:
+# [workspace-N]
+# type = chromium|firefox|app
+# url = https://example.com     (for chromium/firefox)
+# command = /path/to/app         (for app type)
+# name = Friendly Name           (optional, for logging)
+
+# Example: Chromium kiosk window
+[workspace-0]
+type = chromium
+url = https://example.com
+name = Example Website
+
+# Example: Firefox kiosk window
+[workspace-1]
+type = firefox
+url = https://monitoring.example.com
+name = Monitoring Dashboard
+
+# Example: Custom application
+[workspace-2]
+type = app
+command = /usr/bin/spotify
+name = Spotify
+
+# Example: Another Chromium window
+[workspace-3]
+type = chromium
+url = https://dashboard.example.com
+name = Dashboard
+
+# Example: Python application with full path
+[workspace-4]
+type = app
+command = /home/username/.venv/bin/python /home/username/app/main.py
+name = Custom Python App
+
+# Notes:
+# - Workspace numbers can be 0-9 (or higher if your system supports it)
+# - You don't need to define all workspaces, only the ones you want to use
+# - Workspaces will be processed in numerical order
+# - For app type, use full absolute paths
+# - For chromium/firefox, make sure to include https:// in URLs

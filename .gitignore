@@ -1,0 +1,22 @@
+# User configuration
+workspaces.conf
+
+# Log files
+*.log
+workspace-automation.log
+kiosk-health.log
+
+# Temporary files
+*.tmp
+*.bak
+*~
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
